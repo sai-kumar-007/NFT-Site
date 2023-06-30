@@ -161,6 +161,8 @@ body {
 
 .container {
   padding-inline: 12px;
+  margin: 0 auto;
+  max-width: 1120px;
 }
 
 .body-bg-shape {
@@ -327,9 +329,8 @@ body {
 /* REUSED_STYLES */
 
 /* Header Section */
-.header .logo {
-  display: none;
-}
+
+
 .header {
   position: absolute;
   top: 0;
@@ -337,13 +338,11 @@ body {
   width: 100%;
   background-color: var(--oxford-blue-2);
   box-shadow: var(--shadow-1);
+  padding: 16px 20px;
   z-index: 4;
+  animation: slideIn 0.5s ease-in-out;
 }
 
-.header .active {
-  position: fixed;
-  animation: slidein 0.5s ease forwards;
-}
 @keyframes slidein {
   0% {
     transform :translateY(-100%);
@@ -360,5 +359,19 @@ body {
 .header-action {
   display: flex;
   gap: 8px;
+}
+
+.header .profile-btn {
+  overflow: hidden;
+}
+
+.navbar-list {
+display: flex;
+}
+
+.navbar-link {
+  color: var(--white);
+  font-weight: var(--fw-600);
+  padding: 10px 13px;
 }
 /* Header Section */

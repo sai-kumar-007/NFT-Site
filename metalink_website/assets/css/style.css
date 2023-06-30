@@ -1,8 +1,7 @@
 :root {
-  /**
+  /
    * colors
    */
-
   --prussian-blue: hsla(217, 33%, 17%, 1);
   --oxford-blue-2: hsla(222, 47%, 11%, 1);
   --oxford-blue: hsla(221, 33%, 15%, 1);
@@ -23,11 +22,9 @@
   --maximum-red: hsla(0, 72%, 51%, 1);
   --black: hsla(0, 0%, 0%, 1);
   --gunmetal: hsla(215, 28%, 17%, 1);
-
-  /**
+  /
    * gradient color
    */
-
   --linear-gradient-1: linear-gradient(
     to top left,
     hsla(0, 72%, 51%, 0.4) 0%,
@@ -39,11 +36,11 @@
     hsla(0, 72%, 51%, 1)
   );
 
-  /**
+  /
    * typography
    */
 
-   -ff-nunito: "Nunito", sans-serif;
+  --ff-nunito: "Nunito", sans-serif;
 
   --headline-lg: 3.6rem;
   --headline-md: 2.6rem;
@@ -59,13 +56,13 @@
   --fw-600: 600;
   --fw-500: 500;
 
-  /**
+  /
    * spacing
    */
 
   --section-padding: 32px;
 
-  /**
+  /
    * box shadow
    */
 
@@ -75,7 +72,7 @@
   --shadow-4: 0 0 3px hsl(217, 19%, 27%);
   --shadow-5: 0 5px 13px hsla(214, 19%, 29%, 0.2);
 
-  /**
+  /
    * border radius
    */
 
@@ -93,6 +90,7 @@
   --transition-2: 0.5s ease;
 }
 
+/* RESET_STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -151,18 +149,29 @@ body {
   z-index: 1;
 }
 
+/* scroll side bar styles */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
   background-color: hsl(0, 0%, 98%);
 }
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+/* scroll side bar styles */
+
 /* RESET_STYLES */
 
+/* REUSED_STYLES */
+
 .container {
-  padding-inline: 12px;
-  margin: 0 auto;
   max-width: 1120px;
+  margin: 0 auto;
+  padding-inline: 12px;
 }
 
 .body-bg-shape {
@@ -237,7 +246,6 @@ body {
   border-radius: var(--radius-circle);
   border: 1px solid var(--blue-violet);
 }
-
 .btn-icon ion-icon {
   --ionicon-stroke-width: 50px;
 }
@@ -328,8 +336,7 @@ body {
 }
 /* REUSED_STYLES */
 
-/* Header Section */
-
+/* HEADER_SECTION */
 
 .header {
   position: absolute;
@@ -343,9 +350,9 @@ body {
   animation: slideIn 0.5s ease-in-out;
 }
 
-@keyframes slidein {
+@keyframes slideIn {
   0% {
-    transform :translateY(-100%);
+    transform: translateY(-100%);
   }
   100% {
     transform: translateX(0);
@@ -360,18 +367,16 @@ body {
   display: flex;
   gap: 8px;
 }
-
 .header .profile-btn {
   overflow: hidden;
 }
 
 .navbar-list {
-display: flex;
+  display: flex;
 }
-
 .navbar-link {
   color: var(--white);
   font-weight: var(--fw-600);
   padding: 10px 13px;
 }
-/* Header Section */
+/* HEADER_SECTION */
